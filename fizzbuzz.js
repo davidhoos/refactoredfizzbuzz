@@ -1,23 +1,14 @@
-var startingValue = 0
+fizzBuzzApp(inputNumber = prompt("Please enter a number"));
 
-startingValue = prompt("Please enter a number")
+function fizzBuzzApp(){
 
-function checkValue() {
-	 if (startingValue = NaN) {
- 	alert ("Must Input Number");
- 	return false
- }
-}
-
-for (var countUp = 1; countUp < startingValue; countUp++) {
-	var divByThree = 3;
-	var divByFive = 5;
+for (var countUp = 1; countUp < inputNumber; countUp++) {
 
 	//Is the number divisible by three?
-	if (countUp % divByThree == 0) {
+	if (countUp % 3 == 0) {
 
 		//Also, is it divisible by five?
-		if (countUp % divByFive == 0) {
+		if (countUp % 5 == 0) {
 
 			//If so, then print fizzbuzz.
 			console.log("fizzbuzz");
@@ -26,9 +17,11 @@ for (var countUp = 1; countUp < startingValue; countUp++) {
 			console.log("fizz");
 	
 	//Is it divisible by five?
-	} else if (countUp % divByFive == 0) {
+	} else if (countUp % 5 == 0) {
 			console.log("buzz");
 	} else {
 			console.log(countUp);
 	}
+}
+
 }
